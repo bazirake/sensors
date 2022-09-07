@@ -23,13 +23,14 @@
                             class="mdi me-2 mdi-book-open-variant"></i><span class="hide-menu">Payments</span></a>
               </li>
             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                         data-toggle="modal" data-target="#logoutModal"  href="conf-logout.php" aria-expanded="false">
+                                         data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> <span class="hide-menu">Logout</span></a>
             </li>
             </ul>
         </nav>
         <!--End Sidebar navigation-->
     </div>
+
     <!-- End Sidebar scroll-->
     <div class="sidebar-footer">
         <div class="row">
@@ -51,3 +52,23 @@
         </div>
     </div>
 </aside>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="login.html">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
