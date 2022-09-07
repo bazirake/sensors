@@ -16,7 +16,7 @@
                                              href="devices.php" aria-expanded="false"><i class="mdi me-2 mdi-table"></i><span
                             class="hide-menu">Devices</span></a></li>
               <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                             href="clients.php" aria-expanded="false"><i
+                                             href="Clients.php" aria-expanded="false"><i
                             class="mdi me-2 mdi-emoticon"></i><span class="hide-menu">Clients</span></a></li>
               <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                              href="payments.php" aria-expanded="false"><i
