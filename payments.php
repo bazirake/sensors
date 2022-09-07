@@ -41,7 +41,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Clients</li>
+                                <li class="breadcrumb-item active" aria-current="page">Payments</li>
                             </ol>
                         </nav>
                     </div>
@@ -63,12 +63,12 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header py-3">
-                          <div class="float-left">
-                          <i class="fa fa-list"></i>
-                              Client<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#clientreg">
-                           <i class="fa fa-plus-circle"></i> Add Client</button>
-                             <a style="background-color: #8c6c44; border-color: #8c6c44; margin-left: 6px;" href="javascript:;" class="btn btn-warning btn-sm" id="trefresh">
-                             <i class="fa fa-check-circle" aria-hidden="true"></i>Reflesh table</a>
+                            <div class="float-left">
+                                <i class="fa fa-list"></i>
+                                Client<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#clientreg">
+                                    <i class="fa fa-plus-circle"></i> Add Client</button>
+                                <a style="background-color: #8c6c44; border-color: #8c6c44; margin-left: 6px;" href="javascript:;" class="btn btn-warning btn-sm" id="trefresh">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>Reflesh table</a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -89,23 +89,23 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
-                       <div class="card-header py-3">
-                         <div class="float-left">
-                           <i class="fa fa-list"></i>
-                             Device <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#registrationmodel">
-                               <i class="fa fa-plus-circle"></i> Add Device</button>
-                             <a style="background-color: #8c6c44; border-color: #8c6c44; margin-left: 6px;" href="javascript:;" class="btn btn-warning btn-sm" id="trefresh">
-                               <i class="fa fa-check-circle" aria-hidden="true"></i>Reflesh table</a>
+                        <div class="card-header py-3">
+                            <div class="float-left">
+                                <i class="fa fa-list"></i>
+                                Device <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#registrationmodel">
+                                    <i class="fa fa-plus-circle"></i> Add Device</button>
+                                <a style="background-color: #8c6c44; border-color: #8c6c44; margin-left: 6px;" href="javascript:;" class="btn btn-warning btn-sm" id="trefresh">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>Reflesh table</a>
                             </div>
                         </div>
                         <div class="card-body">
                             List of devices
                         </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     <div class="modal fade  " id="clientreg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
@@ -122,50 +122,50 @@
                     <div class="card  px-4 w-100 py-2 ">
                         <form id="member-form" method="post">
                             <div class="row">
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">Firstname</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" placeholder="Firstname" name="fname" class="form-control" required>
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Firstname</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" placeholder="Firstname" name="fname" class="form-control" required>
                                     </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">Lastname</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" placeholder="Lastname" name="lname" class="form-control" required>
-                                        </div>
-                                    </div>
-                            </div>
-
-                            <div class="row">
-                                    <div class="form-group row">
-                                      <label class="col-sm-4 col-form-label">RegistrationDate</label>
-                                      <div class="col-sm-8">
-                                       <input type="date" name="dates" class="form-control" required >
-
-                                 </div>
                                 </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">Email</label>
-                                        <div class="col-sm-8">
-                                            <input type="email" name="email" placeholder="Email" class="form-control" required>
-                                        </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Lastname</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" placeholder="Lastname" name="lname" class="form-control" required>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">Phone</label>
-                                        <div class="col-sm-8">
-                                            <input type="phone" name="phone" class="form-control" id="phone" placeholder="Eg:0787124101" required >
-                                        </div>
-                                    </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">RegistrationDate</label>
+                                    <div class="col-sm-8">
+                                        <input type="date" name="dates" class="form-control" required >
 
-                                  <div class="form-group row">
-                                     <label class="col-sm-4 col-form-label">IDnumber</label>
-                                       <div class="col-sm-8">
-                                          <input type="text" name="phone" class="form-control" id="phone" placeholder="eg:1199434343348888" required >
-                                      </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Email</label>
+                                    <div class="col-sm-8">
+                                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Phone</label>
+                                    <div class="col-sm-8">
+                                        <input type="phone" name="phone" class="form-control" id="phone" placeholder="Eg:0787124101" required >
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">IDnumber</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="phone" class="form-control" id="phone" placeholder="eg:1199434343348888" required >
+                                    </div>
 
                                 </div>
                             </div>
@@ -192,17 +192,17 @@
         </div>
     </div>
 
-        <!-- ============================================================== -->
-        <!-- End Container fluid  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- footer -->
-        <!-- ============================================================== -->
-        <?php include('include/footer.php');?>
-        <!-- ============================================================== -->
-        <!-- End Wrapper -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- All Jquery -->
-        <!-- ============================================================== -->
-        <?php include('include/script.php');?>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- footer -->
+    <!-- ============================================================== -->
+    <?php include('include/footer.php');?>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <?php include('include/script.php');?>
