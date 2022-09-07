@@ -10,14 +10,14 @@
 	</head>
 	<body>
 	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 col-lg-5">
-					<div class="login-wrap p-4 p-md-5">
+	 <div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6 col-lg-5">
+			   <div class="login-wrap p-4 p-md-5">
 		      	<div class="icon d-flex align-items-center justify-content-center">
 		      		<span class="fa fa-user-o"></span>
 		      	</div>
-		      	<h3 class="text-center mb-4 ">hssiwanjye-has login</h3>
+		      	<h3 class="text-center mb-4 ">Hssiwanjye-has Login</h3>
 						<form action="#" class="login-form">
 		      		<div class="form-group">
 		      			<input type="text" class="form-control rounded-left" placeholder="Username" required>
@@ -37,7 +37,7 @@
 								</div>
 	              </div>
 	            <div class="form-group">
-	            	<button type="submit" class="btn btn-primary rounded submit p-3 px-5">Get Started</button>
+	            	<button type="submit" class="btn btn-primary rounded submit p-3 px-5">Login</button>
 	            </div>
 	          </form>
 	        </div>
@@ -45,10 +45,10 @@
 			</div>
 		</div>
 	</section>
- <script src="login/js/jquery.min.js"></script>
-  <script src="login/js/popper.js"></script>
-  <script src="login/js/bootstrap.min.js"></script>
-  <script src="login/js/main.js"></script>
-	</body>
+      <script src="login/js/jquery.min.js"></script>
+      <script src="login/js/popper.js"></script>
+      <script src="login/js/bootstrap.min.js"></script>
+      <script src="login/js/main.js"></script>
+</body>
 </html>
 

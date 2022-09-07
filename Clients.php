@@ -41,7 +41,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Clients</li>
+                                <li class="breadcrumb-item active" aria-current="page">Client</li>
                             </ol>
                         </nav>
                     </div>
@@ -60,72 +60,138 @@
             <!-- ============================================================== -->
             <div class="row">
                 <!-- Column -->
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                     <div class="card">
+                        <div class="card-header py-3">
+                          <div class="float-left">
+                          <i class="fa fa-list"></i>
+                              Client<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#clientreg">
+                           <i class="fa fa-plus-circle"></i> Add Client</button>
+                             <a style="background-color: #8c6c44; border-color: #8c6c44; margin-left: 6px;" href="javascript:;" class="btn btn-warning btn-sm" id="trefresh">
+                             <i class="fa fa-check-circle" aria-hidden="true"></i>Reflesh table</a>
+                            </div>
+                        </div>
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex flex-wrap align-items-center">
-                                        <div>
-                                            <h3 class="card-title">Sales Overview</h3>
-                                            <h6 class="card-subtitle">Ample Admin Vs Pixel Admin</h6>
-                                        </div>
-                                        <div class="ms-lg-auto mx-sm-auto mx-lg-0">
-                                            <ul class="list-inline d-flex">
-                                                <li class="me-4">
-                                                    <h6 class="text-success"><i
-                                                            class="fa fa-circle font-10 me-2 "></i>Ample</h6>
-                                                </li>
-                                                <li>
-                                                    <h6 class="text-info"><i
-                                                            class="fa fa-circle font-10 me-2"></i>Pixel</h6>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="amp-pxl" style="height: 360px;">
-                                        <div class="chartist-tooltip"></div>
-                                    </div>
-                                </div>
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Tel</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Our Visitors </h3>
-                            <h6 class="card-subtitle">Different Devices Used to Visit</h6>
-                            <div id="visitor"
-                                 style="height: 290px; width: 100%; max-height: 290px; position: relative;"
-                                 class="c3">
-                                <div class="c3-tooltip-container"
-                                     style="position: absolute; pointer-events: none; display: none;">
-                                </div>
+                       <div class="card-header py-3">
+                         <div class="float-left">
+                           <i class="fa fa-list"></i>
+                             Device <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#registrationmodel">
+                               <i class="fa fa-plus-circle"></i> Add Device</button>
+                             <a style="background-color: #8c6c44; border-color: #8c6c44; margin-left: 6px;" href="javascript:;" class="btn btn-warning btn-sm" id="trefresh">
+                               <i class="fa fa-check-circle" aria-hidden="true"></i>Reflesh table</a>
                             </div>
                         </div>
-                        <div>
-                            <hr class="mt-0 mb-0">
+                        <div class="card-body">
+                            List of devices
                         </div>
-                        <div class="card-body text-center ">
-                            <ul class="list-inline d-flex justify-content-center align-items-center mb-0">
-                                <li class="me-4">
-                                    <h6 class="text-info"><i class="fa fa-circle font-10 me-2 "></i>Mobile</h6>
-                                </li>
-                                <li class="me-4">
-                                    <h6 class=" text-primary"><i class="fa fa-circle font-10 me-2"></i>Desktop</h6>
-                                </li>
-                                <li class="me-4">
-                                    <h6 class=" text-success"><i class="fa fa-circle font-10 me-2"></i>Tablet</h6>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+    <div class="modal fade  " id="clientreg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        New Client Registration</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card  px-4 w-100 py-2 ">
+                        <form id="member-form" method="post">
+                            <div class="row">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">Firstname</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" placeholder="Firstname" name="fname" class="form-control" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">Lastname</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" placeholder="Lastname" name="lname" class="form-control" required>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="row">
+                                    <div class="form-group row">
+                                      <label class="col-sm-4 col-form-label">RegistrationDate</label>
+                                      <div class="col-sm-8">
+                                       <input type="date" name="dates" class="form-control" required >
+
+                                 </div>
+                                </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">Email</label>
+                                        <div class="col-sm-8">
+                                            <input type="email" name="email" placeholder="Email" class="form-control" required>
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">Phone</label>
+                                        <div class="col-sm-8">
+                                            <input type="phone" name="phone" class="form-control" id="phone" placeholder="Eg:0787124101" required >
+                                        </div>
+                                    </div>
+
+                                  <div class="form-group row">
+                                     <label class="col-sm-4 col-form-label">IDnumber</label>
+                                       <div class="col-sm-8">
+                                          <input type="text" name="phone" class="form-control" id="phone" placeholder="eg:1199434343348888" required >
+                                      </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="float-right mb-2">
+                                                <button type="button"  color="accent" class="btn btn-success" data-dismiss="modal">Cancel</button>
+                                                <button  id=save-id color="primary" type="submit" class="btn btn-primary  ml-4">
+                                                    Save
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
