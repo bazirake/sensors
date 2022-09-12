@@ -123,8 +123,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                <div class="card  px-4 w-100 py-2" id="ccontent">
-                </div>
+                 <div class="card  px-4 w-100 py-2" id="ccontent">
+                 </div>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ if ($sql_1_result)
   $add_data=array(
    'cid'=>$res->cid,
    'fname'=>$res->fname,
-   'lname'=>$res->fname,'tel'=>$res->tel,
+   'lname'=>$res->lname,'tel'=>$res->tel,
    'email'=>$res->email,'nid'=>$res->nid,
    'dates'=>$res->dates,
    'no'=>$i );
