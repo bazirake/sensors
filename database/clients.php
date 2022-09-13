@@ -1,7 +1,7 @@
 
 <?php
 include('conect.php');
-$sql_1="SELECT * FROM client";
+$sql_1="SELECT * FROM client ORDER BY cid DESC ";
 $sql_1_result=pg_query($sql_1);
 if ($sql_1_result)
 {
@@ -24,5 +24,5 @@ if ($sql_1_result)
  function sendClients($cl=[])
   {
    $ss=array('data'=>$cl);
-   return json_encode($ss);
+    return json_encode($ss);
   }

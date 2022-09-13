@@ -126,10 +126,28 @@
                  <div class="card  px-4 w-100 py-2" id="ccontent">
                  </div>
                 </div>
+                </div>
             </div>
         </div>
     </div>
-        <!-- ============================================================== -->
+    <!-- Logout Modal-->
+    <div class="modal fade"  id="delmodels" tabindex="-1" role="dialog" aria-labelledby="delete confirmation model" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Client confirmation model</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="delmodel">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
         <!-- footer -->
@@ -138,94 +156,171 @@
         <!-- ============================================================== -->
      <?php include('include/script.php'); ?>
      <script type="text/x-handlebars-template" id="cid">
-        <form id="client-form" method="post">
-          <div class="row">
-           <div class="form-group row">
-            <label class="col-sm-4 col-form-label">Firstname</label>
-            <div class="col-sm-8">
-             <input type="hidden"  value='{{id}}' id="idc" class="form-control"  required>
-              <input type="text" value='{{fname}}' placeholder="Firstname" id="fname" class="form-control" required>
-                </div>
-               </div>
-               <div class="form-group row">
-                 <label class="col-sm-4 col-form-label">Lastname</label>
-                   <div class="col-sm-8">
-                      <input type="text" value='{{lname}}' placeholder="Lastname" id="lname" class="form-control" required>
-                  </div>
-                 </div>
-            </div>
-             <div class="row">
-                 <div class="form-group row">
-                     <label class="col-sm-4 col-form-label">RegistrationDate</label>
-                     <div class="col-sm-8">
-                         <input type="date" value='{{dates}}' id="dates" class="form-control" required >
+         {{#eq id '0' }}
+             <form id="client-form" method="post">
+                 <div class="row">
+                     <div class="form-group row">
+                         <label class="col-sm-4 col-form-label">Firstname</label>
+                         <div class="col-sm-8">
+                             <input type="hidden"  value='{{id}}' id="idc" class="form-control"  required>
+                             <input type="text" value='{{fname}}' placeholder="Firstname" id="fname" class="form-control" required>
+                         </div>
                      </div>
-                 </div>
-                 <div class="form-group row">
-                     <label class="col-sm-4 col-form-label">Email</label>
-                     <div class="col-sm-8">
-                         <input type="email" value='{{email}}' id="email" placeholder="Email" class="form-control" required>
-                     </div>
-                 </div>
-             </div>
-             <div class="row">
-                 <div class="form-group row">
-                     <label class="col-sm-4 col-form-label">Phone</label>
-                     <div class="col-sm-8">
-                         <input type="phone" value='{{tel}}'  class="form-control" id="tel" placeholder="Eg:0787124101" required >
-                     </div>
-                 </div>
-                  <div class="form-group row">
-                     <label class="col-sm-4 col-form-label">IDnumber</label>
-                     <div class="col-sm-8">
-                         <input type="text"  value='{{nid}}' class="form-control" id="nid" placeholder="eg:1199434343348888" required >
-                     </div>
-                  </div>
-             </div>
-             <div class="row">
-                 <div class="col-md-12">
-                   <div class="row">
-                     <div class="col-md-6">
-                       <div class="float-right mb-2">
-                          <button type="button"  color="accent" class="btn btn-success" data-dismiss="modal">Cancel</button>
-                            <button id="save-id" type="submit" color="primary" class="btn btn-primary  ml-4">
-                                Save
-                              </button>
-                           </div>
+                     <div class="form-group row">
+                         <label class="col-sm-4 col-form-label">Lastname</label>
+                         <div class="col-sm-8">
+                             <input type="text" value='{{lname}}' placeholder="Lastname" id="lname" class="form-control" required>
                          </div>
                      </div>
                  </div>
-             </div>
-         </form>
+                 <div class="row">
+                     <div class="form-group row">
+                         <label class="col-sm-4 col-form-label">RegistrationDate</label>
+                         <div class="col-sm-8">
+                             <input type="date" value='{{dates}}' id="dates" class="form-control" required >
+                         </div>
+                     </div>
+                     <div class="form-group row">
+                         <label class="col-sm-4 col-form-label">Email</label>
+                         <div class="col-sm-8">
+                             <input type="email" value='{{email}}' id="email" placeholder="Email" class="form-control" required>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="form-group row">
+                         <label class="col-sm-4 col-form-label">Phone</label>
+                         <div class="col-sm-8">
+                             <input type="phone" value='{{tel}}'  class="form-control" id="tel" placeholder="Eg:0787124101" required >
+                         </div>
+                     </div>
+                     <div class="form-group row">
+                         <label class="col-sm-4 col-form-label">IDnumber</label>
+                         <div class="col-sm-8">
+                             <input type="text"  value='{{nid}}' class="form-control" id="nid" placeholder="eg:1199434343348888" required >
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-md-12">
+                         <div class="row">
+                             <div class="col-md-6">
+                                 <div class="float-right mb-2">
+                                     <button type="button"  color="accent" class="btn btn-success" data-dismiss="modal">Cancel</button>
+                                     <button id="save-id" type="submit" color="primary" class="btn btn-primary  ml-4">
+                                         Save
+                                     </button>
+                                 </div>
+                             </div>
+                         </div>
+
+                 </div>
+             </form>
+         {{else}}
+             <form id="client-form" method="post">
+                 <div class="row">
+                     <div class="form-group row">
+                         <label class="col-sm-4 col-form-label">Firstname</label>
+                         <div class="col-sm-8">
+                             <input type="hidden"  value='{{id}}' id="idc" class="form-control"  required>
+                             <input type="text" value='{{fname}}' placeholder="Firstname" id="fname" class="form-control" required>
+                         </div>
+                     </div>
+                     <div class="form-group row">
+                         <label class="col-sm-4 col-form-label">Lastname</label>
+                         <div class="col-sm-8">
+                             <input type="text" value='{{lname}}' placeholder="Lastname" id="lname" class="form-control" required>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="form-group row">
+                         <label class="col-sm-4 col-form-label">RegistrationDate</label>
+                         <div class="col-sm-8">
+                             <input type="date" value='{{dates}}' id="dates" class="form-control" required >
+                         </div>
+                     </div>
+                     <div class="form-group row">
+                         <label class="col-sm-4 col-form-label">Email</label>
+                         <div class="col-sm-8">
+                             <input disabled type="email" value='{{email}}' id="email" placeholder="Email" class="form-control" required>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="form-group row">
+                         <label class="col-sm-4 col-form-label">Phone</label>
+                         <div class="col-sm-8">
+                             <input disabled type="phone" value='{{tel}}'  class="form-control" id="tel" placeholder="Eg:0787124101" required >
+                         </div>
+                     </div>
+                     <div class="form-group row">
+                         <label class="col-sm-4 col-form-label">IDnumber</label>
+                         <div class="col-sm-8">
+                             <input disabled type="text"  value='{{nid}}' class="form-control" id="nid" placeholder="eg:1199434343348888" required >
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                   <div class="col-md-12">
+                      <div class="row">
+                         <div class="col-md-6">
+                            <div class="float-right mb-2">
+                                <button type="button"  color="accent" class="btn btn-success" data-dismiss="modal">Cancel</button>
+                                    <button id="save-id" type="submit" color="primary" class="btn btn-primary  ml-4">
+                                         Update
+                                     </button>
+                                 </div>
+                             </div>
+                         </div>
+                   </div>
+                 </div>
+             </form>
+         {{/eq}}
+
      </script>
      <script type="text/x-handlebars-template" id="clientid">
         {{#each data}}
           <tr><td>{{no}}</td><td>{{fname}}</td><td>{{lname}}</td>
               <td>{{tel}}</td>
               <td>
-                  <div class="dropstart">
+                 <div class="dropstart">
                      <a  href="" data-bs-toggle="dropdown" aria-expanded="false">
                           <i class="fa fa-ellipsis-h w-5 h-5" aria-hidden="true"></i>
                      </a>
-                      <ul class="dropdown-menu">
-                     <li id="{{cid}}" onclick="getClient(this.id)" data-toggle="modal" data-target="#clientreg"><a class="dropdown-item" href="javascript:;" >
-                       <i class="fa fa-edit" style="font-size:17px;color:red"></i>Edit</a>
-                      </li>
-                          <li><a class="dropdown-item" href="javascript:;">
-                         <i class="fa fa-trash" style="font-size:17px;color:red" aria-hidden="true"></i>Delete</a></li>
-                      </ul>
-                  </div>
+                 <ul class="dropdown-menu">
+                   <li id="{{cid}}" onclick="getClient(this.id)" data-toggle="modal" data-target="#clientreg"><a class="dropdown-item" href="javascript:;">
+                        <i class="fa fa-edit" style="font-size:17px;color:red"></i>Edit</a>
+                    </li>
+                   <li  id="{{cid}}" onclick="deleteClient(this.id)" data-toggle="modal" data-target="#delmodels">
+                    <a class="dropdown-item" href="javascript:;">
+                       <i class="fa fa-trash"  style="font-size:17px;color:red" aria-hidden="true"></i>Delete</a>
+                   </li>
+                  </ul>
+                 </div>
               </td>
           </tr>
         {{/each}}
      </script>
+
+    <script type="text/x-handlebars-template" id="client_del">
+      <span> Are you sure  do want to delete {{fname}}-{{lname}} ?</span>
+       <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="{{id}}" type="button" class="btn btn-danger"
+          onclick="delteCl(this.id)">Delete</button>
+       </div>
+    </script>
     <script>
      var client_tem=$("#clientid").html();
      var client_com=Handlebars.compile(client_tem);
      var ctem=$("#cid").html();
-       var ccompile=Handlebars.compile(ctem);
-       function getClient(id)
-         {
+    var del_cl=$("#client_del").html();
+    var comp_client=Handlebars.compile(del_cl);
+     var ccompile=Handlebars.compile(ctem);
+
+     function getClient(id)
+      {
        var loader='<span class="spinner-grow" style="margin: auto;width: 3rem; height: 3rem;" role="status"><span class="text-white" style="position: relative;top: 10px; left: 9px;">wait..</span></span>';
           $("#ccontent").html(loader);
          var path='database/client.php';
@@ -243,8 +338,6 @@
            });
          }
 
-
-
        $(document).on('submit','#client-form',function(e){
          e.preventDefault();
            var nid= $('#nid').val();
@@ -254,31 +347,59 @@
            var email=$('#email').val();
            var tel=$('#tel').val();
            var dates=$('#dates').val();
-           var jqxhr =$.ajax(
-              {
-                type:'POST',
-                dataType: 'json',
-                data:{fname:fname,lname:lname,id:id,nid:nid,email:email,tel:tel,dates:dates},
-                url:'database/registerclient.php',
-               }
-            ).done(function(data){
-             if(data[0].statuss==='insert')
-               {
-               $('#clientreg').modal().hide();
-                loadClients();
-                location.href=location.href;
-                // console.log(data[0].statuss);
-               }
-               else if(data[0].statuss==='exit'){
-                 console.log(data[0].statuss);
+
+           if(parseInt(id)===0)
+             {
+            var loader='<div class="spinner-border" role="status"></div>';
+                $("#save-id").html(loader);
+                 var jqxhr =$.ajax(
+                      {
+                        type:'POST',
+                        dataType:'json',
+                        data:{fname:fname,lname:lname,id:id,nid:nid,email:email,tel:tel,dates:dates},
+                        url:'database/registerclient.php',
+                      }
+                  ).done(function(data){
+                    if(data[0].statuss==='insert')
+                      {
+                      $('#clientreg .close').trigger('click');
+                        loadClients();
+                      }
+                     else if(data[0].statuss==='exit'){
+
+                      //feedd.innerHTML='<strong>User</strong>Already exist,duplicate email,phone or NID.';
+                      }
+                     $("#save-id").html('Save');
+                  })
+                    .fail(function(data){
+                          console.log(data);
+                      })
+
              }
-
-           })
-            .fail(function(data){
-               console.log(data);
-            })
+             else if(parseInt(id)>0){
+                 var jqxhr =$.ajax(
+                     {
+                      type:'POST',
+                      dataType:'json',
+                      data:{fname:fname,lname:lname,id:id,nid:nid,email:email,tel:tel,dates:dates},
+                      url:'database/updateClient.php',
+                     }
+                 ).done(function(data){
+                     if(data.updates==='updated')
+                      {
+                     $('#clientreg .close').trigger('click');
+                        loadClients();
+                      }
+                     else{
+                       $('#clientreg .close').trigger('click');
+                        loadClients();
+                     }
+                  })
+                  .fail(function(data){
+                    console.log(data);
+                 })
+             }
        });
-
 
       function loadClients(){
          $.ajax({
@@ -293,11 +414,61 @@
           });
       }
 
-      function editClient(id){
-          alert(id);
-      }
+    function deleteClient(id) {
+         var loader='<span class="spinner-grow" style="margin: auto;width: 3rem; height: 3rem;" role="status"><span class="text-white" style="position: relative;top: 10px; left: 9px;">wait..</span></span>';
+         $("#delmodel").html(loader);
+           var path='database/client.php';
+            $.ajax({
+                type:'GET',
+                dataType:'json',
+                data:{id:id},
+                url:path
+            })
+              .done(function(data){
+
+                 $("#delmodel").html(comp_client(data[0]));
+                    console.log(data[0]);
+              }).fail(function(data){
+                console.log(data);
+            });
+        }
+
+        function delteCl(id) {
+            var path='database/deleteClient.php';
+            $.ajax({
+              type:'GET',
+              dataType:'json',
+              data:{id:id},
+              url:path
+            })
+                .done(function(data){
+                 // $("#delmodel").html(comp_client(data[0]));
+                    if(data.cdata==='deleted')
+                    {
+                    // $("#delmodels").modal().hide();
+                     // $("#delmodels .close").click();
+                    $('#delmodels .close').trigger( "click");
+                       loadClients();
+                     }
+                    else if(data.cdata==='notdeleted')
+                    {
+                        $('#delmodels .close').trigger( "click");
+                        loadClients();
+                    }
+                }).fail(function(data){
+                console.log(data.cdata);
+            });
+        }
 
      (function(){
       loadClients();
+     })();
+
+     (function(){
+
+       Handlebars.registerHelper('eq',function(a,b ){
+             var next =  arguments[arguments.length-1];
+             return (a === b) ? next.fn(this) : next.inverse(this);
+         });
      })();
     </script>
